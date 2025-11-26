@@ -29,13 +29,7 @@ IsolatedCertificate: Record "Isolated Certificate";
         scopes.Add('https://api.businesscentral.dynamics.com/.default');
         tenantAdminSetup.Get();
 
-#if not CERTIFICATES
-        HttpAuthOAuthClientCredentials.Initialize(
-           StrSubstNo(AuthorityUrlTxt, CleanGuid(TenantId))
-           , tenantAdminSetup."Client ID"
-           , SecretText.SecretStrSubstNo('<get_password_from_isolated_storage>')
-           , scopes);
-#else
+#if CERTIFICATES
         tenantAdminSetup.TestField("Certificate No.");
         IsolatedCertificate.Get(tenantAdminSetup."Certificate No.");
 
@@ -44,8 +38,14 @@ IsolatedCertificate: Record "Isolated Certificate";
             StrSubstNo(AuthorityUrlTxt, CleanGuid(_TenantId))
             , tenantAdminSetup."Client ID"
             , SecretStrSubstNo(CertificateManagement.GetRawCertDataAsBase64String(IsolatedCertificate))
-            , SecretText.SecretStrSubstNo('Br@!ntree2025')
+            , SecretText.SecretStrSubstNo('<get_password_from_isolated_storage>')
             , scopes);
+#else
+        HttpAuthOAuthClientCredentials.Initialize(
+           StrSubstNo(AuthorityUrlTxt, CleanGuid(TenantId))
+           , tenantAdminSetup."Client ID"
+           , SecretText.SecretStrSubstNo('<get_password_from_isolated_storage>')
+           , scopes);
 #endif
 
 
