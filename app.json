@@ -1,0 +1,42 @@
+{
+  "id": "7f29d000-5e71-4d7d-9582-7c6d71137684",
+  "name": "BC-TenantAdmin",
+  "publisher": "EwaldVenter",
+  "version": "1.0.0.0",
+  "brief": "Tenant administration functionality for EwaldVenter Business Central",
+  "description": "This application provides tenant administration functionality for EwaldVenter Business Central.",
+  "privacyStatement": "https://opensource.org/licenses/MIT",
+  "contextSensitiveHelpUrl": "https://opensource.org/licenses/MIT",
+  "EULA": "https://opensource.org/licenses/MIT",
+  "help": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/administration-center-api",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "26.0.0.0",
+  "idRanges": [
+    {
+      "from": 72000,
+      "to": 72999
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "15.0",
+  "features": [
+    "NoImplicitWith",
+    "TranslationFile"
+  ],
+  "suppressWarnings": [
+    "AA0215",
+    "AA0248",
+    "AS0052",
+    "AS0084",
+    "AS0092",
+    "AW0006"
+  ]
+}

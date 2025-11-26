@@ -1,0 +1,17 @@
+{
+    "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.ObjectNameSuffix": " EV",    
+    "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.OnSaveAlFileAction": "Rename",
+    "CRS.ExtensionObjectNamePattern": "<BaseNameShort><Suffix>",
+    "CRS.AlSubFolderName": "src",
+    "CRS.RenameWithGit": true,
+    "CRS.RemoveSuffixFromFilename": true,
+    "al.codeAnalyzers": ["${CodeCop}", "${UICop}"],
+    // "al.codeAnalyzers": ["${CodeCop}"],
+    "al.enableCodeAnalysis": true,    
+    "CRS.ReorganizeByNamespace": true,
+    "al.rootNamespace": "EwaldVenter.TenantAdmin",
+    "al.namespaceTemplate": "EwaldVenter.TenantAdmin",
+    "CRS.NamespacePrefixToIgnore": "EwaldVenter.TenantAdmin"
+}
